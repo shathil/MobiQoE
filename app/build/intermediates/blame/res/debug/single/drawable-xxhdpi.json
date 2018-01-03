@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/fire.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/fire.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_bubble_chart_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_bubble_chart_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_signal_wifi_off_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_signal_wifi_off_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_mail_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_mail_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_fiber_manual_record_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_fiber_manual_record_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_assessment_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_assessment_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_info_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_info_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_opacity_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_opacity_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_power_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_power_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_flash_on_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_flash_on_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/weather_snowy.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/weather_snowy.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_thermometer_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_thermometer_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_smoking_rooms_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_smoking_rooms_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_help_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_help_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_weather_snowy_black_48dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_weather_snowy_black_48dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_thermometer_lines_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_thermometer_lines_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_rowing_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_rowing_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_hot_tub_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_hot_tub_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_brightness_medium_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_brightness_medium_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_insert_drive_file_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_insert_drive_file_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_thermometer_black_48dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_thermometer_black_48dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_fire_black_48dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-xxhdpi/ic_fire_black_48dp.png"
+    }
+]

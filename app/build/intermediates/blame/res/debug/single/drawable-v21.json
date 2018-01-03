@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/mohoque/.android/build-cache/519dd862b797e22b4ccc81f5e2cd378334930479/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/drawable-v21/abc_edit_text_material.xml"
+    }
+]

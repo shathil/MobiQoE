@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/mohoque/.android/build-cache/519dd862b797e22b4ccc81f5e2cd378334930479/output/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/mohoque/.android/build-cache/519dd862b797e22b4ccc81f5e2cd378334930479/output/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/mohoque/.android/build-cache/5b589a909c2b8fb77075cf5809f584a36d14f118/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/mohoque/.android/build-cache/5b589a909c2b8fb77075cf5809f584a36d14f118/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/color/abc_tint_switch_track.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-hdpi/batterysense_image.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-hdpi/batterysense_image.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    }
+]

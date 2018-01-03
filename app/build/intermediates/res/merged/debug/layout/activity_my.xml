@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    tools:context=".BatteryActivity">
+
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/reveal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="1dp"
+                android:dividerPadding="2dp"
+                android:background="@color/Beige"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/ad_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/vcharcard_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/White"
+                    card_view:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/vchart"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/ccharcard_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    card_view:cardBackgroundColor="@color/White"
+                    card_view:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/cchart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/ad_view3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/tcharcard_view"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/White"
+                    card_view:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/tchart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/kucharcard_view"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    card_view:cardBackgroundColor="@color/Beige"
+                    card_view:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/kuchart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_marginBottom="10dp"
+            card_view:cardCornerRadius="4dp">
+
+
+            <FrameLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/White"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_viewfcc"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        card_view:cardCornerRadius="50dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/AppWidget.card.value"
+                                android:id="@+id/fcc_value"
+                                android:background="@drawable/circle_border"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/colorWhite"
+                                android:layout_height="match_parent"/>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:id="@+id/blevel"
+                        app:cpb_background_progressbar_color="@color/ForestGreen"
+                        app:cpb_background_progressbar_width="10dp"
+                        app:cpb_progressbar_color="@color/Orange"
+                        android:layout_gravity="center"
+                        app:cpb_progressbar_width="20dp" />
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voltage"
+                        android:id="@+id/term_voltage"
+                        android:textColor="@color/ForestGreen"/>
+
+                    <ImageView
+                        android:id="@+id/flash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_flash_on_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|bottom"
+                    android:paddingLeft="0dp">
+
+                    <ImageView
+                        android:id="@+id/overheat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_thermometer_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/term_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/overheat"
+                        android:layout_alignLeft="@+id/overheat"
+                        android:layout_alignRight="@+id/overheat"
+                        android:layout_alignTop="@+id/overheat"
+                        android:text="Temperature"
+                        android:textColor="@color/ForestGreen" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

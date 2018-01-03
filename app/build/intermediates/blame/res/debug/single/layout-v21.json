@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/mohoque/.android/build-cache/46be1f38ab2e43ae9cd7bda38e7667138853b1c9/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

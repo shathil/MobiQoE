@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_info_outline_black_24dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-mdpi/ic_info_outline_black_24dp.png"
+    },
+    {
+        "merged": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_battery_alert_black_48dp.png",
+        "source": "/Users/mohoque/AndroidStudioProjects/MobiQoE/app/src/main/res/drawable-mdpi/ic_battery_alert_black_48dp.png"
+    }
+]

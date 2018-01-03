@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "864558599845",
+    "firebase_url": "https://mobiqoe-87198.firebaseio.com",
+    "project_id": "mobiqoe-87198",
+    "storage_bucket": "mobiqoe-87198.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864558599845:android:74159135d7ed7999",
+        "android_client_info": {
+          "package_name": "com.mobiqoe.enforce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864558599845-n3jcmtmrqa4r8sc13lpggn8alqpvaeim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjbfme4nPyExcj_3xl3yagcD6lNcEjblg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

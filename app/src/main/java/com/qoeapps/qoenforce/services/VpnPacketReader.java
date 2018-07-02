@@ -224,8 +224,11 @@ public class VpnPacketReader extends VpnService implements Handler.Callback, IPr
 
                     handler.handlePacket(data, length);
                     try{
-                        Thread.sleep(25);
-                        BroadcastMessageQueue.getQueueInstance().push(SLEEP_PERIOD,25);
+                        int r = (int) (Math.random() * (150 - 50)) + 50;
+                        Thread.sleep(r);
+                        BroadcastMessageQueue.getQueueInstance().push(SLEEP_PERIOD,r);
+                        Log.d(TAG,"Slept: "+r+"ms.");
+
                     } catch (InterruptedException e) {
                         Log.d(TAG,"Failed to sleep: "+ e.getMessage());
                     }
@@ -241,10 +244,7 @@ public class VpnPacketReader extends VpnService implements Handler.Callback, IPr
             else{
                 try {
                     Thread.sleep(100);
-                    if(DeviceState.isScreenOn(pm))
-                        BroadcastMessageQueue.getQueueInstance().push(SLEEP_PERIOD,100);
-                    else
-                        BroadcastMessageQueue.getQueueInstance().push(SLEEP_PERIOD,5000);
+                    BroadcastMessageQueue.getQueueInstance().push(SLEEP_PERIOD,100);
 
                 } catch (InterruptedException e) {
                     Log.d(TAG,"Failed to sleep: "+ e.getMessage());

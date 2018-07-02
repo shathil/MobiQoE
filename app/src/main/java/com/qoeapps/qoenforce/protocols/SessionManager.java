@@ -58,7 +58,7 @@ import static com.qoeapps.qoenforce.datacontrol.InternalMessages.DSCP_CODES;
  * Date: May 20, 2014
  */
 public class SessionManager {
-	public static final String TAG = "AROCollector";
+	//public static final String TAG = "AROCollector";
 	private String CLASS_NAME = SessionManager.this.getClass().getSimpleName();
 	private static Object syncObj = new Object();
 	private static volatile SessionManager instance = null;
@@ -249,18 +249,18 @@ public class SessionManager {
         Session session = null; //getSession(ip, port, srcIp, srcPort);
 		synchronized(syncTable){
 
-			Log.d(CLASS_NAME,"Transport "+transport);
+			//Log.d(CLASS_NAME,"Transport "+transport);
 			session = table.remove(keys);
 
-			Log.d(CLASS_NAME, "Remove Alias Ley "+session.getSessionKey());
+			//Log.d(CLASS_NAME, "Remove Alias Ley "+session.getSessionKey());
 			CandidateFlowQueue.getQueueInstance().pop(session.getSessionKey());
 			if(transport.equals("tcp")){
 				TransportFlowCache.getCacheIntance().pop(keys);
-				Log.d(CLASS_NAME, "Removed TCP flow "+keys+" remaninging ");
+				//Log.d(CLASS_NAME, "Removed TCP flow "+keys+" remaninging ");
 			}
 			if(transport.equals("udp")){
 				UdpFlowCache.getCacheIntance().pop(keys);
-				Log.d(CLASS_NAME, "Removed  UDP flow "+keys);
+				//Log.d(CLASS_NAME, "Removed  UDP flow "+keys);
 
 			}
         }
@@ -273,10 +273,10 @@ public class SessionManager {
 
                 flow.updateFlowMetaData(InternalMessages.duration,Long.toString(session.getFlowDuration()));
                 flow.updateFlowMetaData(InternalMessages.appName,session.getOwnerApplicationName());
-				Log.d(CLASS_NAME,"Received Bytes "+session.getFlowReceivedBytes());
+				//Log.d(CLASS_NAME,"Received Bytes "+session.getFlowReceivedBytes());
 				flow.updateFlowMetaData(InternalMessages.bytesReceived,Long.toString(session.getFlowReceivedBytes()));
 				flow.updateFlowMetaData(InternalMessages.goodput,null);
-				Log.d(CLASS_NAME,"SessionEnds here"+flow.toJSON());
+				//Log.d(CLASS_NAME,"SessionEnds here"+flow.toJSON());
                 VpnFlowCache.getQueueInstance().push(flowKey,flow);
 			}
 
@@ -288,8 +288,8 @@ public class SessionManager {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			Log.d(CLASS_NAME,"closed session -> "+PacketUtil.intToIPAddress(session.getDestAddress())+":"+session.getDestPort()
-					+"-"+PacketUtil.intToIPAddress(session.getSourceIp())+":"+session.getSourcePort());
+			//Log.d(CLASS_NAME,"closed session -> "+PacketUtil.intToIPAddress(session.getDestAddress())+":"+session.getDestPort()
+			//		+"-"+PacketUtil.intToIPAddress(session.getSourceIp())+":"+session.getSourcePort());
 			session = null;
 		}
 	}
@@ -307,17 +307,17 @@ public class SessionManager {
 			table.remove(keys);
 
 
-			Log.d(CLASS_NAME, "Remove Alias Ley "+session.getSessionKey());
+			//Log.d(CLASS_NAME, "Remove Alias Ley "+session.getSessionKey());
 			CandidateFlowQueue.getQueueInstance().pop(session.getSessionKey());
 
 			if(session.getTransport().equals("tcp")){
 				TransportFlowCache.getCacheIntance().pop(keys);
-				Log.d(CLASS_NAME, "Removed TCP flow "+keys);
+				//Log.d(CLASS_NAME, "Removed TCP flow "+keys);
 
 			}
 			if(session.getTransport().equals("udp")){
 				UdpFlowCache.getCacheIntance().pop(keys);
-				Log.d(CLASS_NAME, "Removed UDP flow "+keys);
+				//Log.d(CLASS_NAME, "Removed UDP flow "+keys);
 			}
 
 		}
@@ -327,7 +327,7 @@ public class SessionManager {
                 Long endTime = System.currentTimeMillis();
                 session.setFlowEndTime(endTime);
                 Long startTime = session.getFlowBeginTime();
-                Log.d(CLASS_NAME," Flow Duration "+(endTime-startTime)+"ms");
+                //Log.d(CLASS_NAME," Flow Duration "+(endTime-startTime)+"ms");
                 FlowMetaData flow = VpnFlowCache.getQueueInstance().get(flowKey);
                 if(flow!=null){
 
@@ -335,7 +335,7 @@ public class SessionManager {
 					flow.updateFlowMetaData(InternalMessages.bytesReceived,Long.toString(session.getFlowReceivedBytes()));
                     flow.updateFlowMetaData(InternalMessages.goodput,null);
                     flow.updateFlowMetaData(InternalMessages.appName,session.getOwnerApplicationName());
-                    Log.d(CLASS_NAME,"SessionEnds here "+flow.toJSON());
+                    //Log.d(CLASS_NAME,"SessionEnds here "+flow.toJSON());
                     VpnFlowCache.getQueueInstance().push(flowKey,flow);
 
                 }
@@ -357,8 +357,8 @@ public class SessionManager {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			Log.d(CLASS_NAME,"closed session -> "+PacketUtil.intToIPAddress(session.getDestAddress())+":"+session.getDestPort()
-					+"-"+PacketUtil.intToIPAddress(session.getSourceIp())+":"+session.getSourcePort());
+			//Log.d(CLASS_NAME,"closed session -> "+PacketUtil.intToIPAddress(session.getDestAddress())+":"+session.getDestPort()
+			//		+"-"+PacketUtil.intToIPAddress(session.getSourceIp())+":"+session.getSourcePort());
 			session = null;
 		}
 	}
@@ -375,15 +375,15 @@ public class SessionManager {
 		//updateFlowOwners();
 		DatagramChannel channel = null;
 
-		Integer dscp = BroadcastMessageQueue.getQueueInstance().get(DSCP_CODES);
-		Log.d(CLASS_NAME, "DSCP "+dscp.intValue());
+//		Integer dscp = BroadcastMessageQueue.getQueueInstance().get(DSCP_CODES);
+//		Log.d(CLASS_NAME, "DSCP "+dscp.intValue());
 
 
 		try {
 			channel = DatagramChannel.open();
 			channel.socket().setSoTimeout(0);
 			channel.configureBlocking(false);
-			channel.socket().setTrafficClass(0x40);
+			//channel.socket().setTrafficClass(0x40);
 
 			// one of the fundamentmental problem obseved with voice UDP traffic is the remote end does not hear voice properly. Probably
 			// the timeout was set to 0. Probably setting higher value would do better performance.
@@ -401,13 +401,13 @@ public class SessionManager {
 		String srcips = PacketUtil.intToIPAddress(srcIp);
 		SocketAddress addr = new InetSocketAddress(ips,port);
 
-		Log.d(CLASS_NAME,"initialized connection to remote UDP server: "+ips+":"+port+" from "+srcips+":"+srcPort+" TOS "+tos);
+		//Log.d(CLASS_NAME,"initialized connection to remote UDP server: "+ips+":"+port+" from "+srcips+":"+srcPort+" TOS "+tos);
 		
 		
 		try{
 			channel.connect(addr);
-			tos = channel.socket().getTrafficClass();
-			Log.d(CLASS_NAME, "DSCP tos"+tos);
+			//tos = channel.socket().getTrafficClass();
+			//Log.d(CLASS_NAME, "DSCP tos"+tos);
 
 			ses.setConnected(channel.isConnected());
 			ses.setDestAddress(ip);
@@ -467,7 +467,7 @@ public class SessionManager {
 						selectkey = channel.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE, isudp);
 					}
 					ses.setSelectionkey(selectkey);
-					Log.d(CLASS_NAME,"Registered udp selector successfully");
+					//Log.d(CLASS_NAME,"Registered udp selector successfully");
 				}
 			}
 		} catch (ClosedChannelException e1) {
@@ -493,14 +493,14 @@ public class SessionManager {
 			}
 		}
 		if(ses != null){
-            Log.d(CLASS_NAME,"new UDP session successfully created.");
+            //Log.d(CLASS_NAME,"new UDP session successfully created.");
 		}
 		return ses;
 	}
 	public Session createNewSession(int ip, int port, int srcIp, int srcPort, String transport, int tos){
         // TODO: Hoque, Create new types of key including protocol and application
 		Integer dscp = BroadcastMessageQueue.getQueueInstance().get(DSCP_CODES);
-		Log.d(CLASS_NAME, "DSCP "+dscp.intValue());
+//		Log.d(CLASS_NAME, "DSCP "+dscp.intValue());
 		String keys = createKey(ip,port, srcIp, srcPort, transport);
 		boolean found = false;
 		synchronized(syncTable){
@@ -528,14 +528,14 @@ public class SessionManager {
 		try {
 			channel = SocketChannel.open();
 
-			channel.socket().setTrafficClass(0x40);
+			//channel.socket().setTrafficClass(0x40);
 			channel.configureBlocking(false);
 			channel.socket().setKeepAlive(true);
 			channel.socket().setTcpNoDelay(true);
 			channel.socket().setSoTimeout(0);
 			channel.socket().setReceiveBufferSize(DataConst.MAX_RECEIVE_BUFFER_SIZE);
 
-			tos = channel.socket().getTrafficClass();
+			//tos = channel.socket().getTrafficClass();
 		}catch(SocketException ex){
 			return null;
 		} catch (IOException e) {
@@ -544,22 +544,22 @@ public class SessionManager {
 		}
 
  		String ips = PacketUtil.intToIPAddress(ip);
-		Log.d(CLASS_NAME,"created new socketchannel for "+ips+":"+port+"::"+PacketUtil.intToIPAddress(srcIp)+":"+srcPort+" DSCP "+tos);
+		//Log.d(CLASS_NAME,"created new socketchannel for "+ips+":"+port+"::"+PacketUtil.intToIPAddress(srcIp)+":"+srcPort+" DSCP "+tos);
 		protector.protect(channel.socket());
 		
-		Log.d(CLASS_NAME,"Protected new socketchannel");
+		//Log.d(CLASS_NAME,"Protected new socketchannel");
 		
 		//initiate connection to redude latency
 		SocketAddress addr = new InetSocketAddress(ips,port);
-		Log.d(CLASS_NAME,"initiate connecting to remote tcp server: "+ips+":"+port);
+		//Log.d(CLASS_NAME,"initiate connecting to remote tcp server: "+ips+":"+port);
 		boolean connected = false;
 		try{
 			connected = channel.connect(addr);
 
 			ses.setConnected(connected);
-			channel.socket().setTrafficClass(0x40);
-			tos = channel.socket().getTrafficClass();
-			Log.d(CLASS_NAME, "DSCP tos"+tos);
+			//channel.socket().setTrafficClass(0x40);
+			//tos = channel.socket().getTrafficClass();
+			//Log.d(CLASS_NAME, "DSCP tos"+tos);
 
 
 			//TODO: Hoque this is new session key for tracking the real session from VPNClient to remote address
@@ -600,7 +600,7 @@ public class SessionManager {
 				synchronized(SocketNIODataService.syncSelector){
 					SelectionKey selectkey = channel.register(selector, SelectionKey.OP_CONNECT | SelectionKey.OP_READ | SelectionKey.OP_WRITE);
 					ses.setSelectionkey(selectkey);
-					Log.d(CLASS_NAME,"Registered tcp selector successfully");
+					//Log.d(CLASS_NAME,"Registered tcp selector successfully");
 				}
 			}
 		} catch (ClosedChannelException e1) {
@@ -632,7 +632,7 @@ public class SessionManager {
 
 
     //TODO: Hoque, this TCP session is to disseminate flow meta data realtime to the MetaMine broker
-
+	/*
     public Session createMetaMineSession(int ip, int port, int srcIp, int srcPort, String transport){
         // TODO: Hoque, Create new types of key including protocol and application
         String keys = createKey(ip,port, srcIp, srcPort, transport);
@@ -688,7 +688,7 @@ public class SessionManager {
 
         return ses;
     }
-
+	*/
     /**
 	 * create session key based on destination ip+port and source ip+port
 	 * @param ip

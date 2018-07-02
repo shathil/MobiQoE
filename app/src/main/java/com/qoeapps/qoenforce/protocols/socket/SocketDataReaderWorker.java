@@ -30,7 +30,7 @@ import static com.qoeapps.qoenforce.datacontrol.InternalMessages.SensorContext;
  * Date: July 30, 2014
  */
 public class SocketDataReaderWorker implements Runnable {
-	public static final String TAG = "AROCollector";
+	//public static final String TAG = "AROCollector";
 	private String CLASS_NAME = SocketDataReaderWorker.this.getClass().getSimpleName();
 	private IClientPacketWriter writer;
 	private TCPPacketFactory factory;
@@ -73,9 +73,9 @@ public class SocketDataReaderWorker implements Runnable {
 		if(sess != null){
 			
 			if(sess.isAbortingConnection()){
-				Log.d(CLASS_NAME,"removing aborted connection -> "+
-						PacketUtil.intToIPAddress(sess.getDestAddress())+":"+sess.getDestPort()
-						+"::"+PacketUtil.intToIPAddress(sess.getSourceIp())+":"+sess.getSourcePort()+"::"+sess.getTransport());
+				//Log.d(CLASS_NAME,"removing aborted connection -> "+
+				//		PacketUtil.intToIPAddress(sess.getDestAddress())+":"+sess.getDestPort()
+				//		+"::"+PacketUtil.intToIPAddress(sess.getSourceIp())+":"+sess.getSourcePort()+"::"+sess.getTransport());
 				sess.getSelectionkey().cancel();
 				if(sess.getSocketchannel() != null && sess.getSocketchannel().isConnected()){
 					try {

@@ -1,7 +1,12 @@
 package com.qoeapps.qoenforce.datacontrol;
 
+import android.util.Log;
+
+import com.google.common.collect.Sets;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by mohoque on 22/02/2017.
@@ -15,6 +20,12 @@ public class MetaMineConstants {
             = new HashMap<String, Integer>();
     /** Common names used for Differentiated Services values. */
 
+
+    public static String MetaMineVoIP = "VoIP";
+    public static String MetaMineGSM = "GSM";
+    public static String MetaMineMusic = "Music";
+    public static final Map<String, String> globalFlowTable = new HashMap<String,String>();
+    public static final Map<String, String> deletedFlows = new HashMap<String,String>();
 
     static {
 
@@ -39,5 +50,45 @@ public class MetaMineConstants {
         DIFF_SERV_NAMES.put("AF42", 36);
         DIFF_SERV_NAMES.put("AF43", 38);
         DIFF_SERV_NAMES.put("EF", 46);
+    }
+
+    public static long getFlowTime(String flow){
+
+        long flowBegin = 0;
+        String val = globalFlowTable.get(flow);
+        if (val !=null)
+            flowBegin = Long.parseLong(val.split(":")[2]);
+        return flowBegin;
+
+    }
+
+    public static boolean flowExist(String flow){
+        return globalFlowTable.containsKey(flow);
+
+    }
+    public static Map<String,String> getCandidateFlow (long time, int delta){
+
+        boolean cadFlag = false;
+        Map<String,String> candidateFlowSet = new HashMap<>();
+        for (Map.Entry<String, String> entry : globalFlowTable.entrySet())
+        {
+            String key = entry.getKey();
+            long value = Long.parseLong(entry.getValue().split(":")[0]);
+            //String protocol = entry.getValue().split(":")[2];
+            //Log.d("All Flows ",key+"::"+entry.getValue()+"time delta "+Math.abs(time-value)+"ms.");
+            if (Math.abs(value-time)<=10000){
+
+                Log.d("Live table", "checking the live table: "+key);
+                candidateFlowSet.put(key,entry.getValue());
+                cadFlag = true;
+            }
+
+            if(!cadFlag){
+
+            }
+
+            //Log.d("All Flows ",key+"::"+value);
+        }
+        return candidateFlowSet;
     }
 }

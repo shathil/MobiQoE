@@ -75,7 +75,7 @@ void ad_log(char *message){
 
 
 
-    __android_log_print(ANDROID_LOG_VERBOSE, APPNAME, "%s",message);
+//    __android_log_print(ANDROID_LOG_VERBOSE, APPNAME, "%s",message);
 }
 
 static void
@@ -697,6 +697,7 @@ JNIEXPORT jint JNICALL Java_com_qoeapps_nativesocks_NativeJavaSockInterface_init
 
     return (jint)sfd;
 }
+/*
 jbyteArray as_byte_array(unsigned char* buf, int len) {
     jbyteArray array = env->NewByteArray (len);
     env->SetByteArrayRegion (array, 0, len, reinterpret_cast<jbyte*>(buf));
@@ -708,4 +709,4 @@ unsigned char* as_unsigned_char_array(jbyteArray array) {
     unsigned char* buf = new unsigned char[len];
     env->GetByteArrayRegion (array, 0, len, reinterpret_cast<jbyte*>(buf));
     return buf;
-}
+}*/

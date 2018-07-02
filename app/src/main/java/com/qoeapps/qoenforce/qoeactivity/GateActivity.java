@@ -16,6 +16,8 @@
 
 package com.qoeapps.qoenforce.qoeactivity;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -27,6 +29,7 @@ import android.net.VpnService;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -41,6 +44,7 @@ import com.qoeapps.qoenforce.datacontrol.BroadcastMessageQueue;
 import com.qoeapps.qoenforce.datacontrol.InternalMessages;
 import com.qoeapps.qoenforce.datacontrol.MetaMineConstants;
 //import com.metamine.miner.R;
+import com.qoeapps.qoenforce.services.DeviceMetaReader;
 import com.qoeapps.qoenforce.services.VpnPacketReader;
 
 import java.net.NetworkInterface;
@@ -57,6 +61,12 @@ public class GateActivity extends AppCompatActivity
         System.loadLibrary("native-lib");
     }
     private static final int VPN_REQUEST_CODE = 0x0F;
+
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
 
     private String CLASS_NAME = GateActivity.this.getClass().getSimpleName();
     private boolean waitingForVPNStart;
@@ -81,8 +91,8 @@ public class GateActivity extends AppCompatActivity
         setContentView(R.layout.activity_gate_keeper);
 
 
+        /*
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.qoesel);
-
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
@@ -106,7 +116,7 @@ public class GateActivity extends AppCompatActivity
             }
 
         });
-
+        */
         final Button vpnButton = (Button)findViewById(R.id.vpn);
         vpnButton.setOnClickListener(new View.OnClickListener()
         {
@@ -114,8 +124,10 @@ public class GateActivity extends AppCompatActivity
             public void onClick(View v) {
                 // this is to fall back to the basic sampling service if the VPN connetion cannot be established
                 if (!isVirtualNetworkActive()) {
-                    startVPN();
-                    Log.d(CLASS_NAME,"VPN service and the device profiler started started ...");
+                   // startVPN();
+                   // Log.d(CLASS_NAME,"VPN service and the device profiler started  ...");
+                    Intent procIntent = new Intent(GateActivity.this, DeviceMetaReader.class);
+                    startService(procIntent);
                 }
                 else{
 
@@ -132,6 +144,8 @@ public class GateActivity extends AppCompatActivity
         LocalBroadcastManager.getInstance(this).registerReceiver(vpnStateReceiver,
                 new IntentFilter(VpnPacketReader.BROADCAST_GATE_STATE));
 
+
+        verifyStoragePermissions(this);
 
         new InstalledApplication().execute("");
 
@@ -199,6 +213,19 @@ public class GateActivity extends AppCompatActivity
     }
 
 
+    public static void verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+    }
     private class InstalledApplication extends AsyncTask<String, Void, String> {
 
         final PackageManager mmpkgManager = getApplicationContext().getPackageManager();

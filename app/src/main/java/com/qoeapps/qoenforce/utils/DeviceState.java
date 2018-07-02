@@ -7,6 +7,7 @@ import android.net.TrafficStats;
 import android.os.Build;
 import android.os.PowerManager;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 /**
  * Created by mohoque on 18/02/2017.
@@ -25,29 +26,79 @@ public class DeviceState {
             return pm.isInteractive();
     }
 
-    public static boolean audioMode(AudioManager audioManager){
+    public static boolean audioStart(AudioManager audioManager){
 
 
+        long startTime = System.currentTimeMillis();
         int audioMode = audioManager.getMode();
-        //Log.d("Audio Mode", "Audio modes "+audioManager.MODE_CURRENT +audioManager.MODE_IN_CALL+ audioManager.MODE_IN_COMMUNICATION+ audioManager.MODE_NORMAL+audioManager.MODE_RINGTONE);
+
+
+
+
         if (audioMode == AudioManager.MODE_IN_CALL|| audioMode == AudioManager.MODE_IN_COMMUNICATION || audioMode == audioManager.MODE_RINGTONE){
 
+            //Log.d("Audio Mode", "Audio modes "+audioMode);
             return true;
+
         }
-        else if (audioManager.isMusicActive())
-            return true;
         else
             return false;
     }
 
-    public static boolean isMusicOn(AudioManager audioManager){
-        return audioManager.isMusicActive();
+
+    public static long audioProperties(AudioManager audioManager){
+
+
+        long startTime = System.currentTimeMillis();
+        int audioMode = audioManager.getMode();
+
+
+        if (audioMode == AudioManager.MODE_IN_CALL|| audioMode == AudioManager.MODE_IN_COMMUNICATION || audioMode == audioManager.MODE_RINGTONE){
+
+            //Log.d("Audio Mode", "Audio modes "+audioMode);
+            return startTime;
+
+        }
+        else
+            return -1;
     }
 
-    public static boolean isUserInCall(TelephonyManager tm) {
-
-        return tm.getCallState() != TelephonyManager.CALL_STATE_IDLE;
+    public static long isMusicOn(AudioManager audioManager){
+        //return framesPerBuffer == null ? DEFAULT_FRAME_PER_BUFFER : Integer.parseInt(framesPerBuffer);
+        if (audioManager.isMusicActive())
+            return System.currentTimeMillis();
+        else
+            return -1;
     }
+
+    public static long getStremingStuff(AudioManager audioManager){
+
+        //return framesPerBuffer == null ? DEFAULT_FRAME_PER_BUFFER : Integer.parseInt(framesPerBuffer);
+        if (audioManager.isMusicActive())
+            return System.currentTimeMillis();
+        else
+            return -1;
+    }
+
+
+    public static long isUserInCall(TelephonyManager tm) {
+
+        if(tm.getCallState() != TelephonyManager.CALL_STATE_IDLE)
+            return System.currentTimeMillis();
+        else
+            return -1;
+    }
+
+    public static boolean isUserOffHook(TelephonyManager tm) {
+
+        return tm.getCallState() == TelephonyManager.CALL_STATE_OFFHOOK;
+    }
+
+    public static boolean isUserin(TelephonyManager tm) {
+
+        return tm.getCallState() != TelephonyManager.CALL_STATE_RINGING;
+    }
+
     public static boolean wasInForegound(){
 
         return false;

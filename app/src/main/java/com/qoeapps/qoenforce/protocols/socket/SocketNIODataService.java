@@ -33,7 +33,7 @@ import static com.qoeapps.qoenforce.datacontrol.InternalMessages.SLEEP_PERIOD;
 
 
 public class SocketNIODataService implements Runnable {
-	public static final String TAG = "AROCollector";
+	//public static final String TAG = "AROCollector";
 	public static Object syncSelector = new Object();
 	public static Object syncSelector2 = new Object();
 
@@ -93,7 +93,7 @@ public class SocketNIODataService implements Runnable {
 					//selector.notifyAll();
 				}
 			} catch (IOException e) {
-				Log.e(TAG,"Error in Selector.select(): "+e.getMessage());
+				//Log.e(TAG,"Error in Selector.select(): "+e.getMessage());
 				/* Hoque: this is creating busy loop
 				try {
 					Thread.sleep(100);
@@ -128,7 +128,7 @@ public class SocketNIODataService implements Runnable {
 	void processUDPSelectionKey(SelectionKey key){
 		Integer dscp = BroadcastMessageQueue.getQueueInstance().get(DSCP_CODES);
 		if(!key.isValid()){
-			Log.d(CLASS_NAME,"Invalid SelectionKey for UDP");
+			//Log.d(CLASS_NAME,"Invalid SelectionKey for UDP");
 			return;
 		}
 		DatagramChannel channel = (DatagramChannel)key.channel();
@@ -142,7 +142,7 @@ public class SocketNIODataService implements Runnable {
 			int port = sess.getDestPort();
 			SocketAddress addr = new InetSocketAddress(ips,port);
 			try {
-				Log.d(CLASS_NAME,"selector: connecting to remote UDP server: "+ips+":"+port);
+				//Log.d(CLASS_NAME,"selector: connecting to remote UDP server: "+ips+":"+port);
 				try{
 					channel = channel.connect(addr);
 					channel.socket().setTrafficClass(dscp.intValue());
@@ -161,10 +161,10 @@ public class SocketNIODataService implements Runnable {
 				}
 				
 			}catch(ClosedChannelException ex1){
-				Log.e(CLASS_NAME,"failed to connect to closed udp: "+ex1.getMessage());
+				//Log.e(CLASS_NAME,"failed to connect to closed udp: "+ex1.getMessage());
 				sess.setAbortingConnection(true);
 			} catch (IOException e) {
-				Log.e(CLASS_NAME,"failed to connect to udp: "+e.getMessage());
+				//Log.e(CLASS_NAME,"failed to connect to udp: "+e.getMessage());
 				e.printStackTrace();
 				sess.setAbortingConnection(true);
 			}
@@ -174,7 +174,7 @@ public class SocketNIODataService implements Runnable {
 		}
 	}
 	void processTCPSelectionKey(SelectionKey key) throws IOException{
-		Integer dscp = BroadcastMessageQueue.getQueueInstance().get(DSCP_CODES);
+		//Integer dscp = BroadcastMessageQueue.getQueueInstance().get(DSCP_CODES);
 		if(!key.isValid()){
 			Log.d(CLASS_NAME,"Invalid SelectionKey for TCP");
 			return;
@@ -189,12 +189,12 @@ public class SocketNIODataService implements Runnable {
 			String ips = PacketUtil.intToIPAddress(sess.getDestAddress());
 			int port = sess.getDestPort();
 			SocketAddress addr = new InetSocketAddress(ips,port);
-			Log.d(CLASS_NAME,"connecting to remote tcp server: "+ips+":"+port);
+			//Log.d(CLASS_NAME,"connecting to remote tcp server: "+ips+":"+port);
 			boolean connected = false;
 			if(!channel.isConnected() && !channel.isConnectionPending()){
 				try{
 					connected = channel.connect(addr);
-					channel.socket().setTrafficClass(dscp.intValue());
+					//channel.socket().setTrafficClass(dscp.intValue());
 
 				}catch(ClosedChannelException ex){
 					sess.setAbortingConnection(true);
@@ -211,12 +211,12 @@ public class SocketNIODataService implements Runnable {
 			
 			if(connected){
 				sess.setConnected(connected);
-				Log.d(CLASS_NAME,"connected immediately to remote tcp server: "+ips+":"+port);
+				//Log.d(CLASS_NAME,"connected immediately to remote tcp server: "+ips+":"+port);
 			}else{
 				if(channel.isConnectionPending()){
 					connected = channel.finishConnect();
 					sess.setConnected(connected);
-					Log.d(CLASS_NAME,"connected to remote tcp server: "+ips+":"+port);
+					//Log.d(CLASS_NAME,"connected to remote tcp server: "+ips+":"+port);
 				}
 			}
 		}

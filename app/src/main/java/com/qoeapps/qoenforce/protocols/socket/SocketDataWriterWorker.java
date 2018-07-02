@@ -19,7 +19,7 @@ import java.nio.channels.SocketChannel;
 import static com.qoeapps.qoenforce.datacontrol.InternalMessages.SensorContext;
 
 public class SocketDataWriterWorker implements Runnable{
-	public static final String TAG = "AROCollector";
+	//public static final String TAG = "AROCollector";
 	private String CLASS_NAME = SocketDataWriterWorker.this.getClass().getSimpleName();
 	private IClientPacketWriter writer;
 	private TCPPacketFactory factory;
@@ -55,9 +55,9 @@ public class SocketDataWriterWorker implements Runnable{
 		if(sess != null){
 			sess.setBusywrite(false);
 			if(sess.isAbortingConnection()){
-				Log.d(CLASS_NAME,"Hoque removing aborted connection -> "+
-						PacketUtil.intToIPAddress(sess.getDestAddress())+":"+sess.getDestPort()
-						+"-"+PacketUtil.intToIPAddress(sess.getSourceIp())+":"+sess.getSourcePort()+"::"+sess.getTransport());
+				//Log.d(CLASS_NAME,"Hoque removing aborted connection -> "+
+				//		PacketUtil.intToIPAddress(sess.getDestAddress())+":"+sess.getDestPort()
+				//		+"-"+PacketUtil.intToIPAddress(sess.getSourceIp())+":"+sess.getSourcePort()+"::"+sess.getTransport());
 				sess.getSelectionkey().cancel();
 				if(sess.getSocketchannel() != null && sess.getSocketchannel().isConnected()){
 					try {
@@ -81,8 +81,6 @@ public class SocketDataWriterWorker implements Runnable{
 			return;
 		}
 		DatagramChannel channel = sess.getUdpchannel();
-		String name = PacketUtil.intToIPAddress(sess.getDestAddress())+":"+sess.getDestPort()+
-				"-"+PacketUtil.intToIPAddress(sess.getSourceIp())+":"+sess.getSourcePort();
 		byte[] data = sess.getSendingData();
 		ByteBuffer buffer = ByteBuffer.allocate(data.length);
 		buffer.put(data);
